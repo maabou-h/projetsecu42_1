@@ -1,0 +1,31 @@
+---
+comment: ''
+introduction_md: ''
+disclaimer_md: ''
+guidelines_md: |
+  Les préliminaires sont à connaitre et à appliquer avant de passer à la vérification de chaque exercice. 
+sections:
+
+
+# **************************************************************************** #
+#                                                                              #
+#                                Preliminaires                                 #
+#                                                                              #
+# **************************************************************************** #
+
+
+- name: Préliminaires
+
+  description: "Si un cas de triche est suspecté, la notation s'arrête. Utilisez le
+    flag \"Cheat\" du barême.\n
+    Pour mémoire, un cas de triche correspond à un code qui n'est pas fait ou pas
+    reproductible par son auteur, ou bien l'utilisation d’éléments explicitement interdits
+    (ex: fonctions interdites) ou qui visent à dénaturer le rôle pédagogique du projet.\n\nA utiliser avec calme,
+    précaution, et discernement.\n"
+  questions:
+  - name: Préliminaires simples
+    guidelines: |
+      - La soutenance se fait en présence de l'étudiant noté. C'est de cette façon que tout le monde progresse : en échangeant avec les autres. 
+      - Pas de rendu : 0, la soutenance est terminée.
+      - Des lors qu'un exercice est non fonctionnel, la correction s'arrête. Les exos suivants ne sont pas évalués. 
+      - Vous devez, pour effectuer la soutenance, cloner le dépot git de la personne que vous notez sur son poste.

@@ -1,0 +1,29 @@
+correction_number: 3
+duration: 2
+minimum_mark: 50
+duration: 1
+# ***************************************************************************** #
+#                             FLAG IDS                                          #
+#                                                                               #
+#  1- OK                      7- Cheat                  13- Forbidden fonction  #
+#  2- Empty Work              8- Crash                                          #
+#  3- Incomplete Work         9- Incompete group                                #
+#  4- No author file          10- Outstanding project                           #
+#  5- Invalid compilation     11- Concerning situation                          #
+#  6- Norme                   12- Leaks                                         #
+# ***************************************************************************** #
+flags:
+    - 1
+    - 2
+    - 4
+    - 5
+    - 6
+    - 7
+    - 8
+    - 9
+    - 12
+    - 13
+is_automatic: false
+is_external: false
+is_free: false
+

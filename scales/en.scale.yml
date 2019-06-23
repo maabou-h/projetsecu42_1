@@ -1,0 +1,33 @@
+---
+comment: ''
+introduction_md: ''
+disclaimer_md: ''
+guidelines_md: |
+  Before inspecting and grading each exercise, make sure to read and apply preliminaries. 
+
+sections:
+
+# **************************************************************************** #
+#                                                                              #
+#                                Preliminaries                                 #
+#                                                                              #
+# **************************************************************************** #
+
+
+- name: Preliminaries
+  description: "If cheating is suspected, the evaluation stops here. Use the \"Cheat\" flag of the scale. 
+    => FYI cheating means the student who is suspected cannot explain of recreate their own code, or he's used elements specifically forbidden in the subject (ex: forbidden functions) or that go against school policies.
+    Please do this calmly, wisely and with caution."
+  questions:
+  - name: Simple preliminaries
+    guidelines: |
+        - Defense can only happen if the student being evaluated is present. This way everybody progresses : by exchanging ideas and sharing knowledge with each other.
+        - Nothing submitted (or wrong file or directory) : 0, evaluation is over.
+        - As soon as you come accross an exercise that isn't fully fonctional, evaluation stops. The following exercises won't be evaluated.
+        - In order to grade your peer, you have to clone their git repository on their station.
+    rating: bool
+    kind: standard
+    position: 1
+    questions_skills:
+    - percentage: 0
+      name: Rigor

@@ -1,0 +1,10 @@
+xp: 100
+
+skills:
+  - Rigor 30
+  - Unix 20
+  - Algorithms & AI 50
+
+estimated_time: 1
+solo: true
+repo_closes_after: 1
