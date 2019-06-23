@@ -1,0 +1,8 @@
+.DS_STORE
+subject/*.aux
+subject/*.log
+subject/*.out
+subject/*.toc
+subject/*.pyg
+*.swp
+
