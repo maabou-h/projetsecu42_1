@@ -1,0 +1,9 @@
+image: alpine:3.10.3
+
+repository_checker:
+  script:
+    - apk add git python3 ruby
+    - gem install --no-document kwalify
+    - pip3 install pyaml
+    - git clone https://gitlab-ci-token:${CI_JOB_TOKEN}@42born2git.42.fr/pedago_world/common/tools/repository_checker.git /tmp/repo
+    - python3 /tmp/repo/repository_checker.py .
