@@ -4,5 +4,7 @@ subject/*.log
 subject/*.out
 subject/*.toc
 subject/*.pyg
+subject/*.fls
+.vscode
 *.swp
 
