@@ -53,7 +53,7 @@ guidelines_md: |
     Vous pouvez pour cela utiliser les différents outils présent sur l'ordinateur,
     tels que leaks, valgrind, ou encore e_fence. En cas de fuite mémoire, cochez le flag approprié.
 sections:
-- name: Partie obligatoire
+- name: Exo 01
   description: ''
   questions:
     - name: Gestion d'erreur
@@ -67,9 +67,49 @@ sections:
       rating: bool
       kind: standard
       questions_skills:
-      - percentage: 100
+      - percentage: 20
         name: Rigor
-      - percentage: 100
+      - percentage: 10
         name: Algorithms & AI
-      - percentage: 100
+      - percentage: 10
+        name: Unix
+- name: Exo 02
+  description: ''
+  questions:
+    - name: Gestion d'erreur
+      guidelines: |
+        Effectuez au minimum les tests d'erreur suivants, afin de vérifier la gestion d'erreur
+        du programmme.
+          - Passez un fd arbitraire a la fonction get_next_line, sur lequel il 
+            n'est pas possible de lire (par ex. 42) La fonction doit renvoyer -1.
+          - Vérifiez les retours d'erreur de malloc, read et open.
+
+      rating: bool
+      kind: standard
+      questions_skills:
+      - percentage: 50
+        name: Rigor
+      - percentage: 0
+        name: Algorithms & AI
+      - percentage: 0
+        name: Unix
+- name: Partie bonus
+  description: ''
+  questions:
+    - name: Gestion d'erreur
+      guidelines: |
+        Effectuez au minimum les tests d'erreur suivants, afin de vérifier la gestion d'erreur
+        du programmme.
+          - Passez un fd arbitraire a la fonction get_next_line, sur lequel il 
+            n'est pas possible de lire (par ex. 42) La fonction doit renvoyer -1.
+          - Vérifiez les retours d'erreur de malloc, read et open.
+
+      rating: bool
+      kind: bonus
+      questions_skills:
+      - percentage: 25
+        name: Rigor
+      - percentage: 25
+        name: Algorithms & AI
+      - percentage: 25
         name: Unix
