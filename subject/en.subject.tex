@@ -1,25 +1,312 @@
-% vim: set ts=4 sw=4 tw=80 noexpandtab:
+%******************************************************************************%
+%                                                                              %
+%                  sample.en.tex for LaTeX                                     %
+%                  Created on : Tue Mar 10 13:27:28 2015                       %
+%                  Made by : David "Thor" GIRON <thor@42.fr>                   %
+%                  Updated by : Catherine "Cat" MADINIER <cat@42.fr>           %
+%                                                                              %
+%******************************************************************************%
 
 \documentclass{42-en}
 
-%******************************************************************************%
-%                                                                              %
-%                                   Prologue                                   %
-%                                                                              %
-%******************************************************************************%
 
+%******************************************************************************%
+%                                                                              %
+%                                    Header                                    %
+%                                                                              %
+%******************************************************************************%
 \begin{document}
 
-\title{TEMPLATE TITLE}
-\subtitle{TEMPLATE SUBTITLE}
 
-\summary
-{
-This document is the subject for TEMPLATE.
+
+                           \title{Sample document}
+                          \subtitle{Awesome subtitle}
+\summary {
+  This document is a sample and an introduction to \texttt{LaTeX} and
+  the style class homemade by \href{www.42.fr}{42}.
 }
 
 \maketitle
 
 \tableofcontents
 
+
+%******************************************************************************%
+%                                                                              %
+%                                  Foreword                                    %
+%                                                                              %
+%******************************************************************************%
+\chapter{Foreword}
+
+    The foreword section of a \texttt{42} subject is usually not
+    related in any way to the actual topic of the subject. The idea is
+    to share some jokes (often questionable) or something that the
+    community might be interested in.\\
+
+
+
+
+
+    % Spacing in the source code does not influence spacing in the
+    % generated pdf. The blank lines aboves and below won't appear.
+    % Instead, use \newline (or its shortcut \\) and \newpage to
+    % create vertical spacing.
+
+
+
+
+
+    So, let's use the foreword section of this \texttt{42} subject
+    template to introduce the content of this document and
+    its goals. Specifically, the formatting of a trivial
+    \texttt{LaTeX} document and the normalized chaptering of our
+    subjects. If you read this from the pdf, don't forget to open the
+    source file (\texttt{sample.en.tex} file) next to it, in
+    order to see behind the scenes and to understand what command
+    generates what result. Otherwise, if you have started with the
+    sources, congrats, that's the spirit! But open the pdf
+    (\texttt{sample.en.pdf} file) anyway to double check.\\
+
+    What can you do if the \texttt{sample.en.pdf} file is not available?
+    Easy, just compile the source file \texttt{sample.en.tex} using
+    the shell command \texttt{make}. Please refer to the documentation
+    to set up \texttt{LaTeX} on your system if needed.\\
+
+    If you're not familiar with \texttt{LaTeX}'s syntax, here is a
+    fairly comprehensive list of everything you'll need to write your
+    subject.\\
+
+
+    \section{Example of section}
+
+
+        \subsection{Example of sub-section}
+
+           This sub-section is empty.
+
+
+        \newpage
+
+
+        \subsection{A bullet point list}
+
+            \begin{itemize}\itemsep1pt
+                \item what
+                \item a
+                \item wonderful
+                \item list.\\
+            \end{itemize}
+
+
+        \subsection{A descriptions list}
+
+            \begin{description}\itemsep3pt
+                \item [Orange:] Round and orange fruit.
+                \item [Strawberry:] Strawberry shaped fruit. Also red.
+                \item [Cucumber:] Phallus-shaped green vegetable.\\
+            \end{description}
+
+
+        \subsection{An enumeration}
+
+            An enumeration of the reasons why I like you:\\
+
+            \begin{enumerate}\itemsep7pt
+                \item You are smart.
+                \item Your are very talented.
+                \item Your are magnificent.
+                \item I'm a nice person.
+            \end{enumerate}
+
+
+        \subsection{Urls and links}
+
+            If you have no clue how to insert links or urls in your
+            document, search for an online explanation using
+            \href{www.google.com}{Google}. Please note that \texttt{Google}
+            is available at \url{www.google.com}.
+
+
+        \newpage
+
+
+        \subsection{An info box}
+
+            \info{
+              For information, please read this info box.
+            }
+
+
+        \subsection{A hint box}
+
+            \hint {
+              You should read this hint box, really.
+            }
+
+
+        \subsection{A warning box}
+
+            \warn {
+              Beware! This is a warning box!
+            }
+
+
+        \newpage
+
+
+        \subsection{A \texttt{shell} snippet}
+
+           \begin{42console}
+$sudo rm -rf /\end{42console}
+
+
+
+        \subsection{A \texttt{C} code snippet}
+
+           \begin{42ccode}
+int main( void ) {
+
+    puts( "hello world !" );
+    return 0;
+}
+\end{42ccode}
+
+
+        \subsection{A \texttt{C++} code snippet}
+
+            \begin{42cppcode}
+int main( void ) {
+
+    std::cout << "hello world !" << std::endl;
+    return 0;
+}
+\end{42cppcode}
+
+
+        \subsection{A picture !}
+
+            \begin{figure}[H]
+                \begin{center}
+                \end{center}
+            \end{figure}
+
+
+        \newpage
+
+
+        \subsection{Some special characters}
+
+            \begin{description}\itemsep1pt
+                \item [Underscore:] \_
+                \item [Ampersand:] \&
+                \item [Dollar:] \$
+                \item [Elipsis:] \dots
+            \end{description}
+
+
+    \section{About chaptering}
+
+    Each chapter of the pdf must appear in your subject,
+    \textbf{including} the \texttt{Foreword} chapter. For your
+    convenience, the best way to use this template \texttt{LaTeX} file is
+    to copy it and rename it, then replace the provided descriptions by
+    your own content.\\
+
+    \warn{
+      If you are part of a company, the \texttt{Foreword} chapter is
+      the best place to write about your business, the context
+      of this project, introduce yourself and/or your team, etc.
+    }
+
+%******************************************************************************%
+%                                                                              %
+%                                 Introduction                                 %
+%                                                                              %
+%******************************************************************************%
+\chapter{Introduction}
+
+    The introduction is a presentation of the project outline. It's good
+    practice to specify some context and some ideas about what needs to be
+    done. So with these few lines, students get a global overview
+    of the addressed topics.
+
+
+
+%******************************************************************************%
+%                                                                              %
+%                                  Goals                                       %
+%                                                                              %
+%******************************************************************************%
+\chapter{Goals}
+
+    This chapter explains the educational interest of your project,
+    because in the end a project is only a means to discover and
+    explore new topics. Take our \texttt{42} \texttt{C++}
+    project \texttt{Nibbler}. Despite looking like a simple
+    \texttt{Snake} game, this project introduces the students to the
+    creation of an API and additional plugins for a \texttt{C++} program.
+
+
+
+%******************************************************************************%
+%                                                                              %
+%                             General instructions                             %
+%                                                                              %
+%******************************************************************************%
+\chapter{General instructions}
+
+    This chapter lists all the basic instructions of a project.
+    Languages, restrictions, authorizations, compilation, etc.
+
+
+
+%******************************************************************************%
+%                                                                              %
+%                             Mandatory part                                   %
+%                                                                              %
+%******************************************************************************%
+\chapter{Mandatory part}
+
+    Heart of the subject, the mandatory part describes in detail the
+    work expected and the potentially required tools and/or technologies.
+    The secret of a good subject is the balance between
+    being specific and leaving some room for interpretation and
+    imagination. This balance is very important as it is what will
+    fuel debates and argumentations during peer-evaluations.
+
+
+
+%******************************************************************************%
+%                                                                              %
+%                                 Bonus part                                   %
+%                                                                              %
+%******************************************************************************%
+\chapter{Bonus part}
+
+    When students have invested time and efforts in a project and have reached
+    their goals, it's natural to want to go further! The bonus section
+    is here to nurture these ambitions. Of course, the bonus part is
+    available if and only if the mandatory part is complete and flawless.
+
+
+
+%******************************************************************************%
+%                                                                              %
+%                           Turn-in and peer-evaluation                        %
+%                                                                              %
+%******************************************************************************%
+\chapter{Turn-in and peer-evaluation}
+
+    This part describes the conditions and instructions for the turn-in and
+    peer-evaluation of the project. If your project does not
+    require any specific turn-in or peer-evaluation instruction, feel free to
+    use the following paragraph as is:\\
+
+    Turn in your work using your \texttt{GiT} repository, as
+    usual. Only the work that's in your repository will be graded during
+    the evaluation.
+
+
+
+%******************************************************************************%
 \end{document}
