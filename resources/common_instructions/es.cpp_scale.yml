@@ -1,0 +1,70 @@
+
+comment: ''
+introduction_md: |
+  Por favor, respete las siguientes reglas:
+  - Durante el proceso de evaluación, sea educado, cortés, respetuoso
+    y constructivo. El bienestar de la comunidad se basa en ello.
+
+  - Identifique con la persona (o el grupo) evaluada los posibles 
+    fallos del trabajo. Tómese su tiempo para hablar y 
+    debata sobre los problemas encontrados.
+
+  - Tenga en cuenta que pueden existir pequeñas diferencias
+    de interpretación entre las instrucciones del proyecto, su alcance y sus 
+    funcionalidades. Mantenga la mente abierta y sea lo más justo posible a la hora
+    de calificar. La pedagogía funciona únicamente si se realiza evaluación entre pares
+    de forma seria.
+
+disclaimer_md: |
+  - Califique únicamente el contenido del directorio git clonado del estudiante
+    o del grupo.
+
+  - Compruebe que el directorio git pertenece al estudiante o al grupo,
+    que el proyecto es el correcto y que ha utilizado "git clone" sobre un directorio vacío.
+
+  - Preste mucha atención a que no se haya utilizado ningún alias para engañarle y asegúrese 
+    de que está corrigiendo la entrega oficial.
+
+  - Para evitar cualquier tipo de sorpresa, compruebe con el evaluado los posibles scripts
+    utilizados para facilitar la evaluación.
+
+  - Si como evaluador no ha realizado el proyecto en curso, tendrá 
+    que leer todo el enunciado antes de empezar la evaluación.
+
+  - Utilice los flags disponibles para notificar una entrega vacía, un programa que no funcione,
+    un error de norma, un problema de trampas... En estos casos, se termina la evaluación
+    y la nota es 0 (o -42, en caso de trampas). No obstante, salvo en caso de trampas,
+    se le anima a seguir comentando el trabajo entregado (aunque esté incompleto)
+    para identificar las causas del fracaso y evitar que se vuelvan a reproducir en el futuro.
+  
+  - Durante la evaluación, no se permitirá ningún segfault ni ninguna
+    parada del programa (inesperada, prematura o incontrolada). En esos casos,
+    la nota final es 0. Utilice el flag adecuado.
+    No debería tener que editar ningún archivo, salvo algún archivo de configuración,
+    en caso de que exista. Si desea modificar algún archivo, tendrá que explicar
+    claramente las razones del cambio y estar de acuerdo con el estudiante evaluado antes de
+    hacer nada.
+
+      - También le corresponde verificar que no existen fugas de memoria. Cualquier memoria reservada
+    en el heap deberá ser liberada correctamente antes de que finalice la ejecución.
+    Para eso, puede utilizar las diferentes herramientas que se encuentran en el ordenador,
+    como leaks, valgrind o también e_fence. En caso de fuga de memoria, marque el flag apropiado.
+
+
+guidelines_md: |
+    Debe compilar con clang++, con -Wall -Wextra -Werror
+    Le recordamos que se trata de un proyecto en C++98 y que no se puede utilizar ninguna función/container de las versiones posteriores. 
+    Si los utiliza, tendrá un 0.
+
+    Estos elementos significan que no debe calificar el ejercicio solicitado:
+      - Se implementa una función en un header (salvo en los templates)
+      - Un Makefile compila sin los flags y/o con algo que no sea clang++
+
+    Estos elementos significan que debe ponerle el tag "Función Prohibida" al proyecto:
+      - El uso de una función "C" (*alloc, *printf, free)
+      - El uso de una función prohibida por el proyecto
+      - El uso de "using namespace" o de "friend"
+      - El uso de una librería externa o de las características de las versiones
+        posteriores a C++98
+      - Uso de un contenedor pre-existente de la STL, o de una función pre-existente,
+        para volver a codificar un contenedor.

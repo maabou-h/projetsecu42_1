@@ -1,0 +1,48 @@
+%******************************************************************************%
+%                                                                              %
+%                        Common Instructions                                   %
+%                          for C Projects                                      %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Reglas comunes}
+    \begin{itemize}
+      \item Su proyecto debe estar programado respetando la Norma. Si tiene archivos o
+        funciones extras, entrarán dentro de la verificación de la norma y, como haya 
+		algún error de norma, tendrá un 0 en el proyecto.
+
+      \item Sus funciones no pueden pararse de forma inesperada (segmentation
+      fault, bus error, double free, etc.) salvo en el caso de un comportamiento
+      indefinido. Si esto ocurre, se considerará que su proyecto no es funcional y
+	  tendrá un 0 en el proyecto.
+
+      \item Cualquier memoria reservada en el montón (heap) tendrá que ser liberada cuando sea
+	  necesario. No se tolerará ninguna fuga de memoria.
+
+      \item Si el proyecto lo requiere, tendrá que entregar un Makefile que compilará sus 
+        códigos fuente para crear la salida solicitada, utilizando los flags \texttt{-Wall},
+        \texttt{-Wextra} y \texttt{-Werror}. Su Makefile no debe hacer relink.
+
+      \item Si el proyecto requiere un Makefile, su Makefile debe incluir 
+        al menos las reglas \texttt{\$(NAME)}, \texttt{all}, \texttt{clean},
+        \texttt{fclean} y \texttt{re}.
+
+      \item Para entregar los extras, debe incluir en su Makefile una regla \texttt{bonus} que
+        añadirá los headers, bibliotecas o funciones que no estén permitidos en la parte principal
+		del proyecto. Los extras deben estar dentro de un archivo \texttt{\*\_bonus.\{c/h\}}.
+		Las evaluaciones de la parte obligatoria y de la parte extra se hacen por separado.
+
+      \item Si el proyecto autoriza su \texttt{libft}, debe copiar sus códigos fuente y 
+        y su Makefile asociado en un directorio libft, dentro de la raíz.
+        El Makefile de su proyecto debe compilar la biblioteca con la ayuda de su Makefile
+        y después compilar el proyecto.
+
+      \item Le recomendamos que cree programas de prueba para su proyecto, aunque ese
+        trabajo \textbf{no será ni entregado ni evaluado}. Esto le dará la oportunidad
+        de probar fácilmente su trabajo al igual que el de sus compañeros. 
+
+      \item Deberá entregar su trabajo en el git que se le ha asignado. Solo se evaluará
+        el trabajo que se suba al git. Si Deepthought debe corregir su trabajo, lo hará
+        al final de las evaluaciones por sus pares.
+        Si surge un error durante la evaluación Deepthought, esta última se parará.
+    \end{itemize}

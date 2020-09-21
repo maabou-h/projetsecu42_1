@@ -1,0 +1,50 @@
+%******************************************************************************%
+%                                                                              %
+%                  instructions.tex for 42's Piscine C++                       %
+%                  Created on : Mon Sep  8 15:57:19 2014                       %
+%                  Made by : David "Thor" GIRON <thor@42.fr>                   %
+%                                                                              %
+%******************************************************************************%
+
+
+\chapter{Reglas Generales}
+
+
+    \begin{itemize}
+        \item La declaración de una función en un header (excepto para los templates)
+            o la inclusión de un header no protegido conllevará un 0 en el ejercicio.
+        
+		\item Salvo que se indique lo contrario, cualquier salida se mostrará en stdout y terminará con un newline.
+		\item Los nombres de ficheros impuestos deben seguirse escrupulosamente, así como los nombres de clase, de función y de método.
+		\item Recordatorio : ahora está codificando en \texttt{C++}, no en
+            \texttt{C}. Por eso :
+            \begin{itemize}
+                \item Las funciones siguientes están \textbf{PROHIBIDAS}, y su uso conllevará un 0: \texttt{*alloc}, 
+                    \texttt{*printf} et \texttt{free}
+                \item Puede utilizar prácticamente toda la librería estándar. NO OBSTANTE, sería más inteligente intentar usar la versión para C++ que a lo que ya está acostumbrado en C, para no basarse en lo que ya ha asimilado.
+                    Y no está autorizado a utilizar la STL hasta que le llegue el momento de trabajar con ella (módulo 08).
+                    Eso significa que hasta entonces no se puede utilizar Vector/List/Map/etc... ni nada similar que requiera un include <algorithm>.
+		  \end{itemize}
+        \item El uso de una función o de una mecánica explícitamente prohibida será sancionado con un \texttt{0}
+        \item Tenga también en cuenta que, a menos que se autorice de manera expresa, las palabras clave
+          \texttt{using namespace} y \texttt{friend} están prohibidas.
+          Su uso será castigado con un \texttt{0}.
+        \item Los ficheros asociados a una clase se llamarán siempre \texttt{ClassName.cpp}
+          y \texttt{ClassName.hpp}, a menos que se indique otra cosa.
+        \item Tiene que leer los ejemplos en detalle. Pueden contener prerrequisitos no indicados en las instrucciones.
+        \item No está permitido el uso de librerías externas, de las que forman parte \texttt{C++11}, \texttt{Boost}, ni ninguna de las herramientas que ese amigo suyo que es un figura le ha recomendado.
+        \item Probablemente tenga que entregar muchos ficheros de clase, lo que le va a parecer repetitivo hasta que aprenda a hacer un script con su editor de código favorito.
+        \item Lea cada ejercicio en su totalidad antes de empezar a resolverlo.
+        \item El compilador es \texttt{clang++}
+        \item Se compilará su código con los flags \texttt{-Wall -Wextra -Werror}
+        \item Se debe poder incluir cada include con independencia de los demás include. Por lo tanto, un include debe incluir todas sus dependencias.
+        \item No está obligado a respetar ninguna norma en \texttt{C++}. Puede utilizar el estilo que prefiera. Ahora bien, un código ilegible es un código que no se puede calificar.
+        \item Importante: no va a ser calificado por un programa (a menos que el enunciado especifique lo contrario). Eso quiere decir que dispone cierto grado de libertad en el método que elija para resolver sus ejercicios. 
+        \item Tenga cuidado con las obligaciones, y no sea zángano; podría dejar escapar mucho de lo que los ejercicios le ofrecen.
+        \item Si tiene ficheros adicionales, no es un problema. Puede decidir separar el código de lo que se le pide en varios ficheros, siempre que no haya moulinette.
+        \item Aun cuando un enunciado sea corto, merece la pena dedicarle algo de tiempo, para asegurarse de que comprende bien lo que se espera de usted, y de que lo ha hecho de la mejor manera posible.
+
+\end{itemize}
+
+%******************************************************************************%
+\newpage

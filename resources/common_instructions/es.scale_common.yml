@@ -1,0 +1,38 @@
+
+comment: ''
+introduction_md: |
+  Por favor, respete las normas siguientes:
+  - Sea educado, cortés, respetuoso y constructivo durante el proceso de evaluación. De eso depende el bienestar de la comunidad.
+
+  - Identifique con la persona (o el grupo) evaluado los potenciales malos funcionamientos del trabajo. Tómese el tiempo de debatir sobre los problemas identificados.
+
+  - Tenga en cuenta que puede haber ciertas ligeras diferencias de interpretación de las instrucciones del proyecto, su alcance y su funcionalidad. Mantenga un espíritu abierto y evalúe lo más honradamente posible. Esta pedagogía sólo es válida si la evaluación entre pares se toma en serio.
+
+disclaimer_md: ''
+
+guidelines_md: |
+  - No evalúe más que lo que figura en el repositorio git clonado del estudiante o del grupo.
+
+  - Asegúrese de que el repositorio git es efectivamente el del estudiante o el del grupo, que se trata del proyecto correcto, y que se ha lanzado « git clone » sobre un repositorio vacío.
+
+  - Asegúrese escrupulosamente de que no se ha utilizado para engañar ningún alias y de que va a corregir la entrega oficial.
+
+  - Con el fin de evitar sorpresas, verifique con el evaluado los eventuales scripts usados para facilitar la evaluación.
+
+  - Si, como evaluador, no ha realizado el proyecto que va a evaluar, debe leer el enunciado completamente antes de empezar a evaluar.
+
+  - Utilice los flags disponibles para señalar una entrega vacía, un programa que no funcione, un error de norma, un problema de trampa… En esas situaciones, la evolución se dará por finalizada y la nota será 0, o -42 si ha habido trampa. Sin embargo, salvo en los casos de trampa, le animamos a continuar con el intercambio de opiniones sobre el trabajo entregado, incluso no terminado, para identificar los problemas que han llevado al fracaso y evitar repetirlos en el futuro.
+  
+  - A lo largo de toda la evaluación, no se tolerará ningún segfault ni ninguna parada del programa (inesperada, prematura o incontrolada) En esos casos, la nota final será 0. Utilice el flag correspondiente.
+    No debería tener que editar jamás ningún fichero, salvo el de configuración, si es que existe. En el caso en el que desee modificar un fichero, debe explicar explícitamente por qué necesita editarlo y ponerse de acuerdo con el estudiante evaluado antes de tocar cualquier cosa.
+
+      - Debe comprobar además la ausencia de fuga de memoria. Toda la memoria asignada al montón debe ser liberada antes del final de la ejecución. Para ello, puede utilizar las diferentes herramientas de las que dispone en su ordenador,tales como leaks, valgrind, o e_fence. En caso de fuga de memoria, indíquelo en el flag correspondiente.
+
+
+
+- name: Bonus
+  position: 2
+
+  description:
+    Sólo se empezará a tratar los bonus si ha realizado la parte obligatoria de manera excelente. Eso significa que la parte obligatoria se ha completado perfectamente, desde el principio hasta el final, que su gestión del error ha sido perfecta, incluso en situaciones retorcidas.
+    Si no se reciben todos los punto durante este examen, no se tendrá en cuenta ningún punto durante los bonus.
