@@ -1,7 +1,6 @@
 correction_number: 3
 duration: 2
-minimum_mark: 50
-duration: 1
+minimum_mark: 100
 # ***************************************************************************** #
 #                             FLAG IDS                                          #
 #                                                                               #
@@ -15,12 +14,11 @@ duration: 1
 flags:
     - 1
     - 2
+    - 3
     - 4
     - 5
-    - 6
     - 7
     - 8
-    - 9
     - 12
     - 13
 is_automatic: false
