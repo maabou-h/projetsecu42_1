@@ -63,22 +63,57 @@ sections:
 - name: Mandatory Part
   description: ''
   questions:
-  - name: Error Management
+  - name: User permissions check
     guidelines: |
-      Carry out AT LEAST the following tests to try to stress the error
-      management
-      - Pass an arbitrary file descriptor to the get_next_line function on
-      which it is not possible to read, for example 42. The function must
-      return -1.
-      - Check the error returns for read, malloc, and open.
+      Run the program as a non-root user, then as root with no arguments.
+      - When running as non-root user, the program should exit by telling the user
+      that root privileges are required to run. A help menu/usage is appreciated but not
+      mandatory in this case.
+      - When running as root with no arguments, the program should exit and provide a help menu/usage.
 
     rating: bool
     kind: standard
     questions_skills:
-    - percentage: 100
-      name: Rigor
-    - percentage: 100
-      name: Algorithms & AI
-    - percentage: 100
+    - percentage: 0
+      name: Network & system administration
+    - percentage: 10
+      name: Security
+    - percentage: 25
       name: Unix
 
+  - name: Spoof between host and guest
+    guidelines: |
+      Run the program with the following arguments:
+      ./ft_malcolm [VM ip] [VM mac] [host IP] [host mac]
+      You can get these informations by running the ifconfig command (sudo/root privileges might be needed)
+      The program should be waiting for an ARP request before sending a reply and exiting.
+      After exiting, if you show the arp table on the host with 'arp -a', the mac address of the first IP should
+       be equal to the first MAC provided.
+             You can observe this behaviour by listening to ARP traffic on the network:
+      'tcpdump -vv -i eth0 arp' (considering the interface is eth0)
+
+    rating: bool
+    kind: standard
+    questions_skills:
+    - percentage: 50
+      name: Network & system administration
+    - percentage: 40
+      name: Security
+    - percentage: 5
+      name: Unix
+
+  - name: Program behaviour
+    guidelines: |
+      Run the program with the same arguments as the previous question, but this time, open another
+       terminal and listen to the ARP traffic on the network:
+      'tcpdump -vv -i eth0 arp' (considering the interface is eth0)
+
+    rating: bool
+    kind: standard
+    questions_skills:
+    - percentage: 50
+      name: Network & system administration
+    - percentage: 40
+      name: Security
+    - percentage: 5
+      name: Unix
