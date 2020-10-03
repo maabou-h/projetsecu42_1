@@ -562,6 +562,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
     r = Repository(args.path)
     r.check_all()
+    print("hello")
     r.skills_check()
     r.compare_versions(None if args.l == None else args.l.lower())
     if g_has_error != 0:

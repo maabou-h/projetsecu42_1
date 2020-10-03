@@ -2,114 +2,149 @@
 
 comment: ''
 introduction_md: |
-  Please respect the following rules:
-  - Restez poli, courtois, respectueux et constructif pendant le processus
-    d'évaluation. Le bien-être de la communauté repose là-dessus.
+  - Remain polite, courteous, respectful and constructive
+  throughout the evaluation process. The well-being of the community
+  depends on it.
 
-  - Identifiez avec la personne (ou le groupe) évalué les éventuelles 
-    dysfonctionnements du travail. Prenez le temps d'en discuter et 
-    débatez des problèmes identifiés.
+  - Identify with the person (or the group) evaluated the eventual
+  dysfunctions of the work. Take the time to discuss
+  and debate the problems you have identified.
 
-  - Vous devez prendre en compte qu'il peut y avoir de legères différences
-    d'interprétation entre les instructions du projet, son scope et ses 
-    fonctionnalités. Gardez un esprit ouvert et notez de la manière la plus
-    honnête possible. La pédagogie n'est valide que si la peer-évaluation
-    est faite sérieusement.
+  - You must consider that there might be some difference in how your
+  peers might have understood the project's instructions and the
+  scope of its functionalities. Always keep an open mind and grade
+  him/her as honestly as possible. The pedagogy is valid only and
+  only if peer-evaluation is conducted seriously.
+
 
 disclaimer_md: ''
 
 guidelines_md: |
-  - Ne notez que ce qui est contenu dans le dossier git cloné de l'étudiant
-    ou du groupe.
+  - Only grade the work that is in the student or group's
+  GiT repository.
 
-  - Vérifiez que le dossier git de appartient bien à l'étudiant ou au groupe,
-    que le projet correspond bien, et que "git clone" est utilisé sur un dossier vide.
+  - Double-check that the GiT repository belongs to the student
+  or the group. Ensure that the work is for the relevant project
+  and also check that "git clone" is used in an empty folder.
 
-  - Vérifiez scrupuleusement qu'aucun alias n'a été utilisé pour vous tromper et assurez 
-    vous que vous corrigez bien le rendu officiel.
+  - Check carefully that no malicious aliases was used to fool you
+  and make you evaluate something other than the content of the
+  official repository.
 
-  - Afin d'éviter toute surprise, vérifiez avec l'évalué les potentiels scripts
-    utilisés pour faciliter l'évaluation.
+  - To avoid any surprises, carefully check that both the evaluating
+  and the evaluated students have reviewed the possible scripts used
+  to facilitate the grading.
 
-  - Si, en temps qu'évaluateur, vous n'avez pas fait le projet courant, vous devez 
-    lire le sujet en entier avant de commencer l'évaluation.
+  - If the evaluating student has not completed that particular
+  project yet, it is mandatory for this student to read the
+  entire subject prior to starting the defence.
 
-  - Utilisez les flags disponibles pour signaler un rendu vide, un programme ne fonctionnant pas,
-    une erreur de norme, un problème de triche... Dans ces situations, l'évaluation est terminée
-    et la note est 0 (ou -42 en cas de triche). Cependant, à l'exception des cas de triche,
-    vous êtes encouragés à continuer la discussion sur le travail rendu (même si pas terminé)
-    pour identifier les problèmes qui ont causé cet échec et éviter de les reproduire dans le futur.
+  - Use the flags available on this scale to signal an empty repository,
+  non-functioning program, a norm error, cheating etc. In these cases,
+  the grading is over and the final grade is 0 (or -42 in case of
+  cheating). However, with the exception of cheating, you are
+  encouraged to continue to discuss your work (even if you have not
+  finished it) in order to identify any issues that may have caused
+  this failure and avoid repeating the same mistake in the future.
   
-  - Pendant toute la durée de l'évaluation, aucun segfault ou autre arrêt
-    du programme (inattendu, prémature ou incontrôlé) ne sera toléré. Dans ces cas-là,
-    la note finale est 0. Utilisez le flag approprié.
-    Vous ne devriez jamais avoir à éditer un fichier mis à part un fichier de configuration,
-    si celui-ci existe. Dans le cas ou vous souhaitez modifier un fichier, vous devez expliciter
-    clairement les raisons de l'édition et entre en accord avec l'étudiant évalué avant de faire
-    quoi que ce soit.
+  - Remember that for the duration of the defence, no segfault,
+  no other unexpected, premature, uncontrolled or unexpected
+  termination of the program, else the final grade is 0. Use the
+  appropriate flag. 
+  You should never have to edit any file except the configuration file if it exists.
+  If you want to edit a file, take the time to explicit the reasons with the 
+  evaluated student and make sure both of you are okay with this.
 
-      - Il vous revient également de vérifier l'absence de fuite mémoire. Toute mémoire allouée
-    sur la heap doit être proprement libérée avant la fin de l'éxecution.
-    Vous pouvez pour cela utiliser les différents outils présent sur l'ordinateur,
-    tels que leaks, valgrind, ou encore e_fence. En cas de fuite mémoire, cochez le flag approprié.
+  - You must also verify the absence of memory leaks. Any memory allocated on the heap must
+  be properly freed before the end of execution.
+  You are allowed to use any of the different tools available on the computer, such as
+  leaks, valgrind, or e_fence. In case of memory leaks, tick the appropriate flag.
 sections:
-- name: Exo 01
+- name: Mandatory Part
   description: ''
   questions:
-    - name: Gestion d'erreur
-      guidelines: |
-        Effectuez au minimum les tests d'erreur suivants, afin de vérifier la gestion d'erreur
-        du programmme.
-          - Passez un fd arbitraire a la fonction get_next_line, sur lequel il 
-            n'est pas possible de lire (par ex. 42) La fonction doit renvoyer -1.
-          - Vérifiez les retours d'erreur de malloc, read et open.
+  - name: User permissions check
+    guidelines: |
+      Run the program as a non-root user, then as root with no arguments.
+      - When running as non-root user, the program should exit by telling the user
+      that root privileges are required to run. A help menu/usage is appreciated but not
+      mandatory in this case.
+      - When running as root with no arguments, the program should exit and provide a help menu/usage.
 
-      rating: bool
-      kind: standard
-      questions_skills:
-      - percentage: 20
-        name: Rigor
-      - percentage: 10
-        name: Algorithms & AI
-      - percentage: 10
-        name: Unix
-- name: Exo 02
+    rating: bool
+    kind: standard
+    questions_skills:
+    - percentage: 30
+      name: Network & system administration
+    - percentage: 10
+      name: Security
+    - percentage: 35
+      name: Unix
+
+  - name: Spoof between host and guest
+    guidelines: |
+      Run the program with the following arguments:
+      ./ft_malcolm [VM ip] [VM mac] [host IP] [host mac]
+      You can get these informations by running the ifconfig command (sudo/root privileges might be needed)
+      The program should be waiting for an ARP request before sending a reply and exiting.
+      After exiting, if you show the arp table on the host with 'arp -a', the mac address of the first IP should
+       be equal to the first MAC provided.
+
+    rating: bool
+    kind: standard
+    questions_skills:
+    - percentage: 35
+      name: Network & system administration
+    - percentage: 40
+      name: Security
+    - percentage: 15
+      name: Unix
+
+  - name: Program behaviour
+    guidelines: |
+      Run the program with the same arguments as the previous question, but this time, open another
+       terminal and listen to the ARP traffic on the network:
+      'tcpdump -vv -i [interface] arp'
+
+    rating: bool
+    kind: standard
+    questions_skills:
+    - percentage: 35
+      name: Network & system administration
+    - percentage: 25
+      name: Security
+    - percentage: 25
+      name: Unix
+
+  - name: Error management
+    guidelines: |
+      Run the program with invalid IP addresses, invalid MAC addresses to test the robustness of the program.
+      The program should exit and output a minimum of information. Nothing too fancy, of course.
+
+    rating: bool
+    kind: standard
+    questions_skills:
+    - percentage: 0
+      name: Network & system administration
+    - percentage: 25
+      name: Security
+    - percentage: 25
+      name: Unix
+
+- name: Bonus Part
   description: ''
   questions:
-    - name: Gestion d'erreur
+    - name: Bonuses
       guidelines: |
-        Effectuez au minimum les tests d'erreur suivants, afin de vérifier la gestion d'erreur
-        du programmme.
-          - Passez un fd arbitraire a la fonction get_next_line, sur lequel il 
-            n'est pas possible de lire (par ex. 42) La fonction doit renvoyer -1.
-          - Vérifiez les retours d'erreur de malloc, read et open.
+        For the bonus part, any relevant bonus will grant one point on this scale.
+        IPv6 management, if present, will give two bonus points.
 
-      rating: bool
-      kind: standard
-      questions_skills:
-      - percentage: 50
-        name: Rigor
-      - percentage: 0
-        name: Algorithms & AI
-      - percentage: 0
-        name: Unix
-- name: Partie bonus
-  description: ''
-  questions:
-    - name: Gestion d'erreur
-      guidelines: |
-        Effectuez au minimum les tests d'erreur suivants, afin de vérifier la gestion d'erreur
-        du programmme.
-          - Passez un fd arbitraire a la fonction get_next_line, sur lequel il 
-            n'est pas possible de lire (par ex. 42) La fonction doit renvoyer -1.
-          - Vérifiez les retours d'erreur de malloc, read et open.
-
-      rating: bool
+      rating: multi
       kind: bonus
       questions_skills:
-      - percentage: 25
-        name: Rigor
-      - percentage: 25
-        name: Algorithms & AI
-      - percentage: 25
-        name: Unix
+    - percentage: 100
+      name: Network & system administration
+    - percentage: 100
+      name: Security
+    - percentage: 100
+      name: Unix

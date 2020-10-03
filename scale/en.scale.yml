@@ -1,5 +1,4 @@
 ---
-
 comment: ''
 introduction_md: |
   - Remain polite, courteous, respectful and constructive
@@ -74,11 +73,11 @@ sections:
     rating: bool
     kind: standard
     questions_skills:
-    - percentage: 0
+    - percentage: 30
       name: Network & system administration
     - percentage: 10
       name: Security
-    - percentage: 25
+    - percentage: 35
       name: Unix
 
   - name: Spoof between host and guest
@@ -89,31 +88,62 @@ sections:
       The program should be waiting for an ARP request before sending a reply and exiting.
       After exiting, if you show the arp table on the host with 'arp -a', the mac address of the first IP should
        be equal to the first MAC provided.
-             You can observe this behaviour by listening to ARP traffic on the network:
-      'tcpdump -vv -i eth0 arp' (considering the interface is eth0)
 
     rating: bool
     kind: standard
     questions_skills:
-    - percentage: 50
+    - percentage: 35
       name: Network & system administration
     - percentage: 40
       name: Security
-    - percentage: 5
+    - percentage: 15
       name: Unix
 
   - name: Program behaviour
     guidelines: |
       Run the program with the same arguments as the previous question, but this time, open another
        terminal and listen to the ARP traffic on the network:
-      'tcpdump -vv -i eth0 arp' (considering the interface is eth0)
+      'tcpdump -vv -i [interface] arp'
 
     rating: bool
     kind: standard
     questions_skills:
-    - percentage: 50
+    - percentage: 35
       name: Network & system administration
-    - percentage: 40
+    - percentage: 25
       name: Security
-    - percentage: 5
+    - percentage: 25
+      name: Unix
+
+  - name: Error management
+    guidelines: |
+      Run the program with invalid IP addresses, invalid MAC addresses to test the robustness of the program.
+      The program should exit and output a minimum of information. Nothing too fancy, of course.
+
+    rating: bool
+    kind: standard
+    questions_skills:
+    - percentage: 0
+      name: Network & system administration
+    - percentage: 25
+      name: Security
+    - percentage: 25
+      name: Unix
+
+- name: Bonus Part
+  description: ''
+  questions:
+    - name: Bonuses
+      guidelines: |
+        For the bonus part, any relevant bonus will grant one point on this scale.
+        IPv6 management, if present, will give two bonus points.
+
+      rating: multi
+      kind: bonus
+      questions_skills:
+    - percentage: 100
+      name: Network & system administration
+    - percentage: 100
+      name: Security
+    - percentage: 100
       name: Unix

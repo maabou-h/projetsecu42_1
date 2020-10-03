@@ -88,7 +88,7 @@
        it remains widely used and is unsafe and unprotected in most cases.
 
 \info{
-              You should really start by reading the RFC 826
+              You should really start by reading the RFC 826 and 7042
             }
 
 %******************************************************************************%
@@ -106,7 +106,7 @@
     \\
     • Your Makefile must compile the project and must contain the usual rules. It must recompile and re-link the program only if necessary.\\
     \\
-    • You have to handle errors carefully. In no way can your program quit in an unex-pected manner (Segmentation fault, bus error, double free, etc).\\
+    • You have to handle errors carefully. In no way can your program quit in an unexpected manner (Segmentation fault, bus error, double free, etc).\\
     \\
     • Within the mandatory part, you are allowed to use the following functions:\\
 
@@ -147,7 +147,9 @@
                \begin{42console}
     $./ft_malcolm 10.11.254.254 aa:bb:cc:dd:ee:ff 10.11.12.18 42:42:42:42:42:42 \end{42console}
 
-    If the arguments provided do not follow that rule or are invalid, your program should exit by showing a help menu with an example usage.\\
+    You must only manage a simple IPv4 address for the mandatory part.\\
+    If the arguments provided do not follow that rule or are invalid, your program should exit and output some information.\\
+    How precise the information is will be up to you, but you are encouraged to provide details on the errors.\\
 
     For this project, you will have to send an ARP reply containing the source ip and the mac you want to tell it belongs to
     to spoof the arp table of the target.\\
@@ -172,6 +174,9 @@
  Find below a few ideas of interesting bonuses:\\
  
     • IPv6 management.
+    • Decimal notation for IPv4 addresses
+    • Verbose mode to print packet information
+    • Any other bonuses that provide extra functionalities to your program
 
 
 %******************************************************************************%
