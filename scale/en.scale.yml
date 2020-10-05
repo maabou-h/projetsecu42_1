@@ -14,10 +14,7 @@ introduction_md: |
   scope of its functionalities. Always keep an open mind and grade
   him/her as honestly as possible. The pedagogy is valid only and
   only if peer-evaluation is conducted seriously.
-
-
 disclaimer_md: ''
-
 guidelines_md: |
   - Only grade the work that is in the student or group's
   GiT repository.
@@ -69,7 +66,6 @@ sections:
       that root privileges are required to run. A help menu/usage is appreciated but not
       mandatory in this case.
       - When running as root with no arguments, the program should exit and provide a help menu/usage.
-
     rating: bool
     kind: standard
     questions_skills:
@@ -79,7 +75,6 @@ sections:
       name: Security
     - percentage: 35
       name: Unix
-
   - name: Spoof between host and guest
     guidelines: |
       Run the program with the following arguments:
@@ -88,7 +83,6 @@ sections:
       The program should be waiting for an ARP request before sending a reply and exiting.
       After exiting, if you show the arp table on the host with 'arp -a', the mac address of the first IP should
        be equal to the first MAC provided.
-
     rating: bool
     kind: standard
     questions_skills:
@@ -98,13 +92,11 @@ sections:
       name: Security
     - percentage: 15
       name: Unix
-
   - name: Program behaviour
     guidelines: |
       Run the program with the same arguments as the previous question, but this time, open another
        terminal and listen to the ARP traffic on the network:
       'tcpdump -vv -i [interface] arp'
-
     rating: bool
     kind: standard
     questions_skills:
@@ -114,12 +106,10 @@ sections:
       name: Security
     - percentage: 25
       name: Unix
-
   - name: Error management
     guidelines: |
       Run the program with invalid IP addresses, invalid MAC addresses to test the robustness of the program.
       The program should exit and output a minimum of information. Nothing too fancy, of course.
-
     rating: bool
     kind: standard
     questions_skills:
@@ -129,21 +119,19 @@ sections:
       name: Security
     - percentage: 25
       name: Unix
-
-- name: Bonus Part
+- name: Bonus part
   description: ''
   questions:
-    - name: Bonuses
-      guidelines: |
-        For the bonus part, any relevant bonus will grant one point on this scale.
-        IPv6 management, if present, will give two bonus points.
-
-      rating: multi
-      kind: bonus
-      questions_skills:
-    - percentage: 100
+  - name: Bonuses
+    guidelines: |
+      For the bonus part, any relevant bonus will grant one point on this scale.
+      IPv6 management, if present, will give two bonus points.
+    rating: multi
+    kind: bonus
+    questions_skills:
+    - percentage: 25
       name: Network & system administration
-    - percentage: 100
+    - percentage: 25
       name: Security
-    - percentage: 100
+    - percentage: 25
       name: Unix
