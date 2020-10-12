@@ -1,6 +1,10 @@
 NAME	=	ft_malcolm
 
-SRCS	=	srcs/ft_malcolm.c
+SRCS	=	srcs/main.c		\
+			srcs/packet.c	\
+			srcs/addr.c		\
+			srcs/ifeth.c	\
+			srcs/ifsock.c
 
 INC		=	incs/ft_malcolm.h
 

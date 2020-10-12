@@ -78,11 +78,11 @@ sections:
   - name: Spoof between host and guest
     guidelines: |
       Run the program with the following arguments:
-      ./ft_malcolm [VM ip] [VM mac] [host IP] [host mac]
+      ./ft_malcolm [VM ip] aa:bb:cc:dd:ee:ff [host IP] [host mac]
       You can get these informations by running the ifconfig command (sudo/root privileges might be needed)
       The program should be waiting for an ARP request before sending a reply and exiting.
-      After exiting, if you show the arp table on the host with 'arp -a', the mac address of the first IP should
-       be equal to the first MAC provided.
+      After the program finishes, if you show the arp table on the host by running 'arp -a', the mac address of the source IP should
+       be equal to aa:bb:cc:dd:ee:ff.
     rating: bool
     kind: standard
     questions_skills:
@@ -97,6 +97,7 @@ sections:
       Run the program with the same arguments as the previous question, but this time, open another
        terminal and listen to the ARP traffic on the network:
       'tcpdump -vv -i [interface] arp'
+      Verify that the program sends an ARP reply only after a request has been made on the network (not necessarily by the target).
     rating: bool
     kind: standard
     questions_skills:

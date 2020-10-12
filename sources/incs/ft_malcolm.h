@@ -22,11 +22,6 @@
 # define IPADDRLEN     4
 # define ETHER_HW_TYPE   1
 
-char usage[] = {
-  "ft_malcolm\n\
-  \tusage: ft_malcolm interface src-ip src-mac prey-ip prey-mac\n\n"
-};
-
 typedef struct                          s_gl
 {
   char                                  rcpkt[4096];
@@ -63,5 +58,14 @@ typedef struct __attribute__((packed))  s_arph
     unsigned char                       arp_dha[6];
     unsigned char                       arp_dpa[4];
 }                                       t_arph;
+
+char                                    *network_resolve(void);
+char                                    *get_interface(void);
+void                                    parseipaddr(struct in_addr* in_addr, char* str);
+void                                    parsemacaddr(char* buf, char* str);
+void                                    fillpkt_arp(char *const *argv, t_arp *pkt, struct sockaddr *sa, char *ifa);
+int                                     getpkt_arp(void);
+
+t_gl  g_gl;
 
 #endif
