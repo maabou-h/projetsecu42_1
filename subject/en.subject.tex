@@ -36,6 +36,7 @@
     Yes, no, maybe\\
     I don't know\\
     Can you repeat the question?\\
+
     You're not the boss of me now\\
     You're not the boss of me now\\
     You're not the boss of me now, and you're not so big\\
@@ -47,6 +48,7 @@
     The tv'd been, but ever since we've moved in it's been empty\\
     Why i, why i'm in this room\\
     There is no point explaining\\
+
     You're not the boss of me now, and you're not so big\\
     You're not the boss of me now\\
     You're not the boss of me now\\
@@ -57,7 +59,7 @@
     I'm right below the horizon\\
     Yes,… \\
 
-    This subject has nothing to do with Malcolm in the middle, but with Man in the middle!\\
+    I figured you like Malcolm in the middle, but this project has actually nothing to do with that.\\
     \newpage
     
 %******************************************************************************%
@@ -68,8 +70,9 @@
 \chapter{Introduction}
 
     In this first project of network security, 
-     you will implement the Address Resolution Protocol spoofing/poisoning method, which is one of the most basic Man In The Middle attacks 
-     using a vulnerability present in the ARP protocol.
+     you will implement the Address Resolution\\
+     Protocol spoofing/poisoning method, which is one of the most basic Man In The Middle attacks. 
+     This attack is possible using a vulnerability present in the the way the ARP protocol works and interacts in a network.
 
 
 
@@ -81,11 +84,12 @@
 \chapter{Goals}
 
     In this project aimed at introducing you to network security,
-     you will discover in details what is the Address Resolution Protocol,
-      that you may have seen during your days of piscine as ARP, and how it 
-      works. You will find that this implementation has several vulnerabilities 
-      and while protections and alternatives to arp might exist,
-       it remains widely used and is unsafe and unprotected in most cases.
+    you will discover in details what is the Address Resolution Protocol,
+    that you may have seen during your days of piscine as ARP, and how it 
+    works.\\
+    You will find that this implementation has several vulnerabilities 
+    and while protections and alternatives to arp might exist,
+    it remains widely used and is unsafe and unprotected in most cases.\\
     The ARP protocol lies within the second layer of the complex but wonderful OSI model.
 
 \info{
@@ -111,24 +115,23 @@
     \\
     • Within the mandatory part, you are allowed to use the following functions:\\
 
-          ◦ sendto, recvfrom\\
+            ◦ sendto, recvfrom\\
 
-          ◦ socket, setsockopt\\  
+            ◦ socket, setsockopt\\  
 
-          ◦ getuid, close, signal\\
+            ◦ getuid, close, signal\\
 
-          ◦ inet\_addr, gethostbyname, getifaddrs, freeifaddrs\\ 
+            ◦ inet\_addr\\
 
-          ◦ htons, ntohs\\  
+            ◦ gethostbyname, getifaddrs, freeifaddrs\\ 
 
-          ◦ printf and its family.\\  
+            ◦ htons, ntohs\\  
 
-          ◦ Your libft functions.\\    
+            ◦ printf and its family.\\  
 
-          ◦ You are allowed to use other functions to complete the bonus part as long as their use is justified during your defense. Be smart.\\
+            ◦ Your libft functions.\\    
 
-
-
+            ◦ You are allowed to use other functions to complete the bonus part as long as their use is justified during your defense. Be smart.
 
 %******************************************************************************%
 %                                                                              %
@@ -137,13 +140,17 @@
 %******************************************************************************%
 \chapter{Mandatory part}
 
-    Your program must take the following four arguments:\\
-    source ip\\
-    source mac address\\
-    target ip\\
-    target mac address\\
-    Those parameters must always be given in that order.\\
+    This project will introduce you to network security through the use of sockets and packet mainpulation.\\
+    Since raw sockets require low level privileges, your project must be done inside a VM and must only run as root/sudo user.\\
 
+    Your program must take the following four arguments:\\
+      source ip\\
+      source mac address\\
+      target ip\\
+      target mac address\\
+
+      Those parameters must always be given in that order.\\
+    \\
         Example usage:
                \begin{42console}
     foo@debian:~/projetsecu42_1/sources$ sudo ./ft_malcolm 10.12.255.255 ff:bb:ff:ff:ee:ff 10.12.10.22 10:dd:b1:**:**:**
@@ -154,14 +161,14 @@
     Now sending an ARP reply to the target address with spoofed source, please wait...
     Sent an ARP reply packet, you may now check the arp table on the target.
     Exiting program... \end{42console}
-
+    \\
     In that example, the program sends an ARP Reply packet to the target (10.12.10.22) containing information on the source (10.12.255.255 and it's associated (spoofed) mac address)
     right after detecting that an ARP request has been sent over the network.\\
 
-    You must only manage a simple IPv4 address for the mandatory part.\\
+    You must only manage a simple IPv4 address for the mandatory part.
     If the arguments provided do not follow that rule or are invalid, your program should exit and output some information.\\
     How precise the information is will be up to you, but you are encouraged to provide details on the errors.\\
-
+\\
         Example error handling:
             \begin{42console}
     foo@debian:~/projetsecu42_1/sources$ sudo ./ft_malcolm 10.11.11.11 aa:bb:cc:dd:ee:ff 10.11.11.1111 aa:bb:cc:dd:ee:ff
@@ -176,8 +183,6 @@
               You are only allowed to spoof IPs that belong to you, such as your VM. Spoofing other IPs might result in problems and/or sanctions.
             }
     Your program should be able to exit when the user inputs Ctrl+C\\
-
-    If you haven't noticed yet, the socket calls in C require low-level privileges, so your program must only run as root/sudo user.
 
 
 %******************************************************************************%
