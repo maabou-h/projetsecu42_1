@@ -144,13 +144,13 @@
     Since raw sockets require low level privileges, your project must be done inside a VM and must only run as root/sudo user.\\
 
     Your program must take the following four arguments:\\
-      source ip\\
-      source mac address\\
-      target ip\\
-      target mac address\\
+    source ip\\  
+    source mac address\\  
+    target ip\\  
+    target mac address\\  
 
       Those parameters must always be given in that order.\\
-    \\
+
         Example usage:
                \begin{42console}
     foo@debian:~/projetsecu42_1/sources$ sudo ./ft_malcolm 10.12.255.255 ff:bb:ff:ff:ee:ff 10.12.10.22 10:dd:b1:**:**:**
@@ -161,19 +161,20 @@
     Now sending an ARP reply to the target address with spoofed source, please wait...
     Sent an ARP reply packet, you may now check the arp table on the target.
     Exiting program... \end{42console}
-    \\
+    
     In that example, the program sends an ARP Reply packet to the target (10.12.10.22) containing information on the source (10.12.255.255 and it's associated (spoofed) mac address)
     right after detecting that an ARP request has been sent over the network.\\
 
     You must only manage a simple IPv4 address for the mandatory part.
     If the arguments provided do not follow that rule or are invalid, your program should exit and output some information.\\
     How precise the information is will be up to you, but you are encouraged to provide details on the errors.\\
-\\
+
         Example error handling:
             \begin{42console}
     foo@debian:~/projetsecu42_1/sources$ sudo ./ft_malcolm 10.11.11.11 aa:bb:cc:dd:ee:ff 10.11.11.1111 aa:bb:cc:dd:ee:ff
-    ft_malcolm: unknown host or invalid IP address: (10.11.11.1111).
+    ft_malcolm: unknown host or invalid IP address: (10.11.11.1111).\end{42console}
 
+            \begin{42console}
     foo@debian:~/projetsecu42_1/sources$ sudo ./ft_malcolm 10.11.11.11 aa:bb:cc:dd:ee:ff 10.11.11.11 aaa:bb:cc:dd:ee:ff
     ft_malcolm: invalid mac address: (aaa:bb:cc:dd:ee:ff)\end{42console}
 
@@ -195,12 +196,15 @@
     We will look at your bonuses if and only if your mandatory part is EXCELLENT. This means that your must complete the mandatory part, beginning to end, and your error management must be flawless, even in cases of twisted or bad usage.  If that’s not the case, your bonuses will be totally IGNORED.
  }
 
- Find below a few ideas of interesting bonuses:\\
- 
-    • Decimal notation for IPv4 addresses\\
-    • Hostname resolution for IPv4 addresses\\
-    • Verbose mode to print packet information\\
-    • Any other bonuses that provide extra functionalities to your program\\
+Find below a few ideas of interesting bonuses:\\
+  
+• Decimal notation for IPv4 addresses\\
+\\  
+• Hostname resolution for IPv4 addresses\\
+\\  
+• Verbose mode to print packet information\\
+\\  
+• Any other bonuses that provide extra functionalities to your program\\
 
 
 %******************************************************************************%
